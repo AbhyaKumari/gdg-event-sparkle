@@ -92,12 +92,6 @@ h1 { font-size: 64px; line-height: 1.12; font-weight: 650; margin: 28px 0 17px; 
 .hero-actions { display: flex; gap: 18px; align-items: center; margin-top: 28px; }
 .hero-actions > span { color: var(--muted-foreground); font-size: 11px; }
 .community-proof { display: flex; align-items: center; gap: 14px; margin-top: 30px; }
-.avatar-stack { display: flex; padding-left: 0; }
-.avatar-stack span { width: 32px; height: 32px; display: grid; place-items: center; border: 2px solid var(--hero-surface); border-radius: 50%; background: var(--blue-soft); color: var(--primary); font-size: 9px; font-weight: 650; margin-left: -6px; }
-.avatar-stack span:first-child { margin-left: 0; }
-.avatar-stack span:nth-child(2) { background: var(--red-soft); color: var(--red); }
-.avatar-stack span:nth-child(3) { background: var(--yellow-soft); color: var(--foreground); }
-.avatar-stack span:nth-child(4) { background: var(--green-soft); color: var(--green); }
 .community-proof p { font-size: 10px; line-height: 1.7; color: var(--muted-foreground); }
 .community-proof strong { font-weight: 500; color: var(--foreground); }
 .art-caption { position: absolute; right: 0; bottom: 41px; display: flex; align-items: center; gap: 10px; font-size: 8px; letter-spacing: 1px; color: var(--muted-foreground); }
