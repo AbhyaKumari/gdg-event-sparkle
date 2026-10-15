@@ -115,7 +115,7 @@ h1 { font-size: 64px; line-height: 1.12; font-weight: 650; margin: 28px 0 17px; 
 .intro-inner svg { height: 18px; width: 18px; color: var(--primary); }
 .intro-inner > div > span:nth-child(2) svg { color: var(--red); }
 .intro-inner > div > span:nth-child(3) svg { color: var(--green); }
-.schedule-section { padding-block: 76px 48px; }
+.why-section { padding-block: 76px 48px; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 25px; margin-bottom: 34px; }
 .blue-eyebrow { color: var(--primary); }
 h2 { font-size: 40px; line-height: 1.18; font-weight: 550; margin: 15px 0 0; }
@@ -123,29 +123,24 @@ h2 { font-size: 40px; line-height: 1.18; font-weight: 550; margin: 15px 0 0; }
 .heading-aside > span { display: flex; align-items: center; gap: 8px; font-size: 11px; }
 .heading-aside svg { width: 14px; height: 14px; }
 .timezone { padding: 3px 6px; border: 1px solid var(--border); border-radius: 3px; font-size: 9px; margin-left: 5px; }
-.session-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 17px; }
-.session-card { --session-color: var(--primary); --session-soft: var(--blue-soft); padding: 23px 20px 20px; border: 1px solid var(--border); border-top: 3px solid var(--session-color); border-radius: 6px; transition: transform .2s, box-shadow .2s; }
-.session-card:hover { transform: translateY(-4px); box-shadow: var(--form-shadow); }
-.tone-red { --session-color: var(--red); --session-soft: var(--red-soft); }
-.tone-yellow { --session-color: var(--yellow); --session-soft: var(--yellow-soft); }
-.tone-green { --session-color: var(--green); --session-soft: var(--green-soft); }
-.session-top { display: flex; justify-content: space-between; align-items: center; }
-.session-track { display: flex; gap: 6px; align-items: center; font-size: 9px; font-weight: 600; letter-spacing: 1px; color: var(--session-color); }
-.tone-yellow .session-track { color: var(--foreground); }
-.session-track svg { width: 13px; height: 13px; }
-.session-arrow { color: var(--muted-foreground); width: 15px; height: 15px; }
-.session-time { display: flex; align-items: baseline; gap: 6px; margin: 26px 0 17px; }
-.session-time strong { font-size: 22px; font-weight: 500; }
-.session-time > span { font-size: 10px; color: var(--muted-foreground); }
-.session-card h3 { font-size: 18px; font-weight: 550; line-height: 1.4; margin: 0 0 10px; }
-.session-description { font-size: 12px; line-height: 1.8; color: var(--muted-foreground); min-height: 65px; margin: 0 0 23px; }
-.speaker { display: flex; align-items: center; gap: 9px; border-top: 1px solid var(--border); padding-top: 18px; }
-.speaker-avatar { display: grid; place-items: center; width: 33px; height: 33px; border-radius: 50%; flex-shrink: 0; background: var(--session-soft); color: var(--foreground); font-size: 10px; font-weight: 600; }
-.speaker strong { font-size: 11px; font-weight: 550; display: block; }
-.speaker small { display: block; font-size: 8px; color: var(--muted-foreground); margin-top: 4px; line-height: 1.5; }
-.schedule-note { display: flex; justify-content: space-between; gap: 15px; margin-top: 23px; color: var(--muted-foreground); font-size: 10px; }
-.schedule-note > span:first-child { display: flex; align-items: center; gap: 7px; }
-.schedule-note svg { width: 13px; height: 13px; }
+.benefit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
+.benefit-card { --card-color: var(--primary); --card-soft: var(--blue-soft); padding: 26px 23px 23px; border: 1px solid var(--border); border-top: 3px solid var(--card-color); border-radius: 6px; transition: transform .2s, box-shadow .2s; }
+.benefit-card:hover { transform: translateY(-4px); box-shadow: var(--form-shadow); }
+.tone-red { --card-color: var(--red); --card-soft: var(--red-soft); }
+.tone-yellow { --card-color: var(--yellow); --card-soft: var(--yellow-soft); }
+.tone-green { --card-color: var(--green); --card-soft: var(--green-soft); }
+.benefit-top { display: flex; justify-content: space-between; align-items: center; }
+.benefit-icon { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 50%; background: var(--card-soft); color: var(--card-color); }
+.benefit-icon svg { width: 19px; height: 19px; }
+.benefit-number { font-size: 10px; font-weight: 650; letter-spacing: 1.4px; color: var(--muted-foreground); }
+.benefit-card h3 { font-size: 21px; font-weight: 550; line-height: 1.35; margin: 24px 0 10px; }
+.benefit-description { font-size: 12px; line-height: 1.8; color: var(--muted-foreground); margin: 0 0 21px; }
+.benefit-list { list-style: none; margin: 0; padding: 17px 0 0; border-top: 1px solid var(--border); display: grid; gap: 11px; }
+.benefit-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 11px; line-height: 1.6; }
+.benefit-list svg { width: 13px; height: 13px; flex-shrink: 0; margin-top: 3px; color: var(--card-color); }
+.why-note { display: flex; justify-content: space-between; gap: 15px; margin-top: 23px; color: var(--muted-foreground); font-size: 10px; }
+.why-note > span:first-child { display: flex; align-items: center; gap: 7px; }
+.why-note svg { width: 13px; height: 13px; }
 .registration-section { background: var(--registration-surface); border-block: 1px solid var(--border); }
 .registration-inner { padding-block: 66px; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
 .green-eyebrow { color: var(--green); }
