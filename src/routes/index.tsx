@@ -80,7 +80,7 @@ function Index() {
             <p className="hero-description">A day to learn, build, and connect with the people<br className="desktop-break" /> shaping what’s next. Your community is waiting.</p>
             <div className="event-badges"><span><CalendarDays /> Nov 14, 2026</span><span><Clock3 /> 9:00 AM – 5:00 PM</span><span><MapPin /> IIIT Kalyani</span></div>
             <div className="hero-actions"><Button variant="event" asChild><a href="#register">Register now <ArrowRight /></a></Button><span>Free to attend. Open to everyone.</span></div>
-            <div className="community-proof"><div className="avatar-stack"><span>AS</span><span>RM</span><span>PN</span><span>AP</span></div><p><strong>Good people. Great conversations.</strong><br />Come for the tech. Stay for the community.</p></div>
+            <div className="community-proof"><p><strong>Good people. Great conversations.</strong><br />Come for the tech. Stay for the community.</p></div>
           </div>
           <div className="art-caption"><span className="color-dots"><i /><i /><i /><i /></span> BUILT BY THE COMMUNITY, FOR THE COMMUNITY</div>
         </div>
