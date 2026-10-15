@@ -39,7 +39,7 @@ function Brand({ footer = false }: { footer?: boolean }) {
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [role, setRole] = useState("");
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Partial<Record<"name" | "email" | "role", string>>>({});
   const [success, setSuccess] = useState(false);
   const [firstName, setFirstName] = useState("");
 
@@ -55,7 +55,7 @@ function Index() {
       return;
     }
     setErrors({});
-    setFirstName(result.data.name.split(" ")[0]);
+    setFirstName(result.data.name.split(" ")[0] ?? result.data.name);
     setSuccess(true);
     form.reset();
     setRole("");
