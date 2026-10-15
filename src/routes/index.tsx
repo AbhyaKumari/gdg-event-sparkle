@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
-import { ArrowRight, ArrowUpRight, CalendarDays, Check, CheckCircle2, Clock3, Code2, Globe2, Heart, MapPin, Menu, Sparkles, Users, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CalendarDays, Check, CheckCircle2, Clock3, Code2, Heart, MapPin, Menu, Sparkles, Users, X } from "lucide-react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,9 +11,9 @@ import sculpture from "@/assets/devfest-sculpture.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
     { title: "GDG DevFest 2026 · Build what's next" },
-    { name: "description", content: "Join GDG DevFest 2026 at IIIT Kalyani for a day of AI, web, cloud, and community. Explore the sessions and reserve your spot." },
+    { name: "description", content: "Join GDG DevFest 2026 at IIIT Kalyani for a day of AI, web, cloud, and community. See why it's worth your day and reserve your spot." },
     { property: "og:title", content: "GDG DevFest 2026 · Build what's next" },
-    { property: "og:description", content: "One community. Endless possibilities. Explore the DevFest schedule and join us at IIIT Kalyani." },
+    { property: "og:description", content: "One community. Endless possibilities. Find out why DevFest is worth clearing your calendar, and join us at IIIT Kalyani." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ] }),
@@ -25,11 +25,10 @@ const registrationSchema = z.object({
   email: z.string().trim().email("Please enter a valid email address.").max(255),
   role: z.enum(["student", "professional"], { errorMap: () => ({ message: "Please choose your role." }) }),
 });
-const sessions = [
-  { time: "09:30", end: "10:15 AM", track: "KEYNOTE", color: "blue", icon: Sparkles, title: "The next chapter of AI", description: "Exploring what's possible with Gemini and the future of building with AI.", speaker: "Ananya Sharma", position: "Google Developer Expert · AI/ML", initials: "AS" },
-  { time: "10:30", end: "11:15 AM", track: "WEB", color: "red", icon: Code2, title: "Build a better web", description: "Modern web experiences that are fast, accessible, and built for everyone.", speaker: "Rahul Mehta", position: "Senior Engineer · Web Technologies", initials: "RM" },
-  { time: "11:30", end: "12:15 PM", track: "CLOUD", color: "yellow", icon: Globe2, title: "From idea to cloud", description: "Take your next big idea from a local prototype to a scalable cloud application.", speaker: "Priya Nair", position: "Cloud Architect · Google Cloud", initials: "PN" },
-  { time: "01:30", end: "02:15 PM", track: "COMMUNITY", color: "green", icon: Users, title: "Better, together", description: "Open source, meaningful connections, and finding your place in tech.", speaker: "Arjun Patel", position: "Community Lead · GDG Bengaluru", initials: "AP" },
+const benefits = [
+  { number: "01", color: "blue", icon: Sparkles, title: "Learn from Experts", description: "Hear from Google Developer Experts and engineers who ship real products — then ask them anything you’re stuck on.", points: ["Talks from people who build, not just present", "Straight answers to the questions you brought"] },
+  { number: "02", color: "red", icon: Users, title: "Networking", description: "Sit beside students, founders, and engineers who share your curiosity. Your next collaborator is one coffee away.", points: ["Meet the people behind projects you admire", "Find mentors, teammates, and new openings"] },
+  { number: "03", color: "green", icon: Code2, title: "Hands-on Skills", description: "Roll up your sleeves and build. Try today’s tools side by side with the community, and take the work home with you.", points: ["Workshops where you follow along, live", "Walk out with something you made yourself"] },
 ];
 
 function Brand({ footer = false }: { footer?: boolean }) {
@@ -65,7 +64,7 @@ function Index() {
     <header className="site-header"><div className="page-width nav-inner">
       <Brand />
       <nav className={menuOpen ? "navigation is-open" : "navigation"} aria-label="Main navigation">
-        <a href="#about" onClick={() => setMenuOpen(false)}>The event</a><a href="#schedule" onClick={() => setMenuOpen(false)}>Schedule</a><a href="#register" onClick={() => setMenuOpen(false)}>Join us</a>
+        <a href="#about" onClick={() => setMenuOpen(false)}>The event</a><a href="#why" onClick={() => setMenuOpen(false)}>Why attend</a><a href="#register" onClick={() => setMenuOpen(false)}>Join us</a>
       </nav>
       <Button variant="event" asChild className="nav-register"><a href="#register">Register now <ArrowUpRight /></a></Button>
       <Button variant="ghost" size="icon" className="menu-toggle" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</Button>
@@ -89,15 +88,14 @@ function Index() {
 
       <section className="intro-strip" id="about"><div className="page-width intro-inner"><p>One day. <strong>Endless possibilities.</strong></p><div><span><Code2 /> Learn something new</span><span><Users /> Find your people</span><span><Sparkles /> Build what’s next</span></div></div></section>
 
-      <section className="schedule-section page-width" id="schedule">
-        <div className="section-heading"><div><div className="eyebrow blue-eyebrow">THE LINEUP</div><h2>A little inspiration.<br />A lot of possibility.</h2></div><div className="heading-aside"><p>Fresh perspectives from people building the future.<br />Make room for your next “aha” moment.</p><span><CalendarDays /> Saturday, November 14 <span className="timezone">IST</span></span></div></div>
-        <div className="session-grid">{sessions.map(session => <article key={session.title} className={`session-card tone-${session.color}`}>
-          <div className="session-top"><span className="session-track"><session.icon />{session.track}</span><ArrowUpRight className="session-arrow" /></div>
-          <div className="session-time"><strong>{session.time}</strong><span>– {session.end}</span></div>
-          <h3>{session.title}</h3><p className="session-description">{session.description}</p>
-          <div className="speaker"><span className="speaker-avatar">{session.initials}</span><div><strong>{session.speaker}</strong><small>{session.position}</small></div></div>
+      <section className="why-section page-width" id="why">
+        <div className="section-heading"><div><div className="eyebrow blue-eyebrow">WHY ATTEND</div><h2>One day.<br />Three good reasons<br />to be here.</h2></div><div className="heading-aside"><p>DevFest turns curiosity into capability.<br />Come for one. Stay for all three.</p><span><CalendarDays /> Saturday, November 14 <span className="timezone">IST</span></span></div></div>
+        <div className="benefit-grid">{benefits.map(benefit => <article key={benefit.title} className={`benefit-card tone-${benefit.color}`}>
+          <div className="benefit-top"><span className="benefit-icon"><benefit.icon /></span><span className="benefit-number">{benefit.number}</span></div>
+          <h3>{benefit.title}</h3><p className="benefit-description">{benefit.description}</p>
+          <ul className="benefit-list">{benefit.points.map(point => <li key={point}><Check />{point}</li>)}</ul>
         </article>)}</div>
-        <div className="schedule-note"><span><Clock3 /> Plenty of breaks, coffee, and connections in between.</span><span>Sample agenda · More good things to come</span></div>
+        <div className="why-note"><span><Sparkles /> All three, included with your free spot.</span><span>Free to attend · Open to everyone</span></div>
       </section>
 
       <section className="registration-section" id="register"><div className="page-width registration-inner">
