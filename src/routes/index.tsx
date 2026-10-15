@@ -11,9 +11,9 @@ import sculpture from "@/assets/devfest-sculpture.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
     { title: "GDG DevFest 2026 · Build what's next" },
-    { name: "description", content: "Join GDG DevFest 2026 at IIIT Kalyani for a day of AI, web, cloud, and community. Explore the sessions and reserve your spot." },
+    { name: "description", content: "Join GDG DevFest 2026 at IIIT Kalyani for a day of AI, web, cloud, and community. See why it's worth your day and reserve your spot." },
     { property: "og:title", content: "GDG DevFest 2026 · Build what's next" },
-    { property: "og:description", content: "One community. Endless possibilities. Explore the DevFest schedule and join us at IIIT Kalyani." },
+    { property: "og:description", content: "One community. Endless possibilities. Find out why DevFest is worth clearing your calendar, and join us at IIIT Kalyani." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ] }),
