@@ -11,9 +11,9 @@ import sculpture from "@/assets/devfest-sculpture.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
     { title: "GDG DevFest 2026 · Build what's next" },
-    { name: "description", content: "Join GDG DevFest 2026 in Bengaluru for a day of AI, web, cloud, and community. Explore the sessions and reserve your spot." },
+    { name: "description", content: "Join GDG DevFest 2026 at IIIT Kalyani for a day of AI, web, cloud, and community. Explore the sessions and reserve your spot." },
     { property: "og:title", content: "GDG DevFest 2026 · Build what's next" },
-    { property: "og:description", content: "One community. Endless possibilities. Explore the DevFest schedule and join us in Bengaluru." },
+    { property: "og:description", content: "One community. Endless possibilities. Explore the DevFest schedule and join us at IIIT Kalyani." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ] }),
@@ -79,7 +79,7 @@ function Index() {
             <h1>GDG DevFest <span className="year"><i>2</i><i>0</i><i>2</i><i>6</i><span className="title-spark">✳</span></span></h1>
             <p className="hero-tagline">Big ideas start with <span>us.</span></p>
             <p className="hero-description">A day to learn, build, and connect with the people<br className="desktop-break" /> shaping what’s next. Your community is waiting.</p>
-            <div className="event-badges"><span><CalendarDays /> Nov 14, 2026</span><span><Clock3 /> 9:00 AM – 5:00 PM</span><span><MapPin /> Bengaluru, India</span></div>
+            <div className="event-badges"><span><CalendarDays /> Nov 14, 2026</span><span><Clock3 /> 9:00 AM – 5:00 PM</span><span><MapPin /> IIIT Kalyani</span></div>
             <div className="hero-actions"><Button variant="event" asChild><a href="#register">Register now <ArrowRight /></a></Button><span>Free to attend. Open to everyone.</span></div>
             <div className="community-proof"><div className="avatar-stack"><span>AS</span><span>RM</span><span>PN</span><span>AP</span></div><p><strong>Good people. Great conversations.</strong><br />Come for the tech. Stay for the community.</p></div>
           </div>
@@ -111,6 +111,6 @@ function Index() {
       </div></section>
     </main>
     <footer className="page-width footer"><Brand footer /><p>A community-led event. A world of possibilities.</p><span className="color-dots"><i /><i /><i /><i /></span></footer>
-    <Dialog open={success} onOpenChange={setSuccess}><DialogContent className="success-modal"><div className="success-symbol"><CheckCircle2 /></div><span className="color-dots"><i /><i /><i /><i /></span><DialogTitle>Success! You’re registered.</DialogTitle><DialogDescription>Thanks for joining us, {firstName}! Your demo registration is complete. We can’t wait to build what’s next, together.</DialogDescription><div className="success-event"><CalendarDays /><span>GDG DevFest 2026<small>November 14 · Bengaluru, India</small></span></div><Button variant="event" onClick={() => setSuccess(false)}>See you at DevFest <ArrowRight /></Button></DialogContent></Dialog>
+    <Dialog open={success} onOpenChange={setSuccess}><DialogContent className="success-modal"><div className="success-symbol"><CheckCircle2 /></div><span className="color-dots"><i /><i /><i /><i /></span><DialogTitle>Success! You’re registered.</DialogTitle><DialogDescription>Thanks for joining us, {firstName}! Your demo registration is complete. We can’t wait to build what’s next, together.</DialogDescription><div className="success-event"><CalendarDays /><span>GDG DevFest 2026<small>November 14 · IIIT Kalyani</small></span></div><Button variant="event" onClick={() => setSuccess(false)}>See you at DevFest <ArrowRight /></Button></DialogContent></Dialog>
   </>;
 }
